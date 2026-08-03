@@ -1,0 +1,31 @@
+// background.js — نسخه کامل Gamification + Leitner
+
+chrome.runtime.onInstalled.addListener(async () => {
+  // تنظیمات اولیه
+  await chrome.storage.local.set({
+    dailyGoalDone: false,
+    userStreak: 0,
+    totalXP: 0,
+    currentLevel: 1
+  });
+  
+  console.log("✅ LingoVault 1.2.2 نصب شد");
+});
+
+chrome.alarms.create("dailyGoalCheck", {
+  periodInMinutes: 60,
+  when: Date.now() + 10000
+});
+
+chrome.alarms.onAlarm.addListener(async (alarm) => {
+  if (alarm.name === "dailyGoalCheck") {
+    const state = await chrome.storage.local.get("dailyGoalDone");
+    if (state.dailyGoalDone) {
+      chrome.notifications.create("growthChallenge", {
+        title: "🌟 چالنج رشد",
+        message: "امروز ۵ دقیقه تمرین کردی! چالنج هفته رو ببینید.",
+        iconUrl: "assets/icons/icon128.png"
+      });
+    }
+  }
+});
