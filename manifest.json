@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "LingoVault 1",
+  "version": "1.2.2",
+  "description": "LingoVault 1 — حافظه واژگان با الگوریتم Leitner",
+  "permissions": ["alarms", "storage", "notifications", "tts", "sidePanel"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "popup.html"
+  }
+}
