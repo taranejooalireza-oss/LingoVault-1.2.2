@@ -1,0 +1,110 @@
+// popup.js — LingoVault 1.2.2 کامل
+// مدیریت همه چیز: Leitner، Weekly Growth، Grammar Songs، Gamification
+
+import { WordRepository } from './repositories/WordRepository.js';
+import { GrammarRepository } from './repositories/GrammarRepository.js';
+import { StatisticsRepository } from './repositories/StatisticsRepository.js';
+import { SettingsRepository } from './repositories/SettingsRepository.js';
+import { AchievementRepository } from './repositories/AchievementRepository.js';
+import { WeeklyGrowthModal } from './features/weeklyGrowth/weeklyGrowthModal.js';
+import { GrammarSongsUI } from './features/grammarSongs/grammarSongsUI.js';
+import { StreakTracker } from './gamification/StreakTracker.js';
+import { XPSystem } from './gamification/XPSystem.js';
+import { DailyGoalTracker } from './gamification/DailyGoalTracker.js';
+import { AchievementEngine } from './gamification/AchievementEngine.js';
+
+class LingoVaultPopup {
+  constructor() {
+    this.repo = new WordRepository(this);
+    this.grammarRepo = new GrammarRepository(this);
+    this.statsRepo = new StatisticsRepository(this);
+    this.settingsRepo = new SettingsRepository(this);
+    this.achRepo = new AchievementRepository(this);
+    
+    this.streakTracker = new StreakTracker(this);
+    this.xpSystem = new XPSystem(this);
+    this.dailyGoalTracker = new DailyGoalTracker(this);
+    this.achievementEngine = new AchievementEngine(this);
+    
+    this.storage = chrome.storage.local;
+    this.init();
+  }
+
+  async init() {
+    await this.loadTheme();
+    await this.renderHome();
+    this.bindEvents();
+    
+    // چک روزانه هدف
+    if (await this.dailyGoalTracker.isCompletedToday()) {
+      this.showWeeklyGrowthModal();
+    }
+  }
+
+  async loadTheme() {
+    const { theme } = await this.settingsRepo.find();
+    document.body.classList.toggle('theme-dark', theme === 'dark');
+  }
+
+  async renderHome() {
+    const dueWords = await this.repo.findDue();
+    const dueGrammar = await this.grammarRepo.findDue();
+    const streak = await this.streakTracker.getCurrentStreak();
+    const xp = await this.xpSystem.getLevelAndXP();
+
+    const html = `
+      <div class="leitner-header">
+        <div>
+          <h1 class="leitner-title">LingoVault</h1>
+          <p style="font-size:13px;color:var(--text-secondary)">حافظه واژگان هوشمند</p>
+        </div>
+        <div class="leitner-streak">
+          🔥 <span>${streak.streak}</span> روز
+        </div>
+      </div>
+
+      <div class="leitner-card">
+        <h3 style="margin:0 0 12px;font-size:16px">واژگان امروز</h3>
+        <div class="words-list">
+          ${dueWords.map(w => `
+            <div class="word-item">
+              <div>
+                <div class="word-en">${w.word}</div>
+                <div class="word-fa">${w.translation}</div>
+              </div>
+              <button onclick="window.grammarRepo.save({id:'${w.id}',box:2})" class="btn btn-outline btn-sm">مرور</button>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="wg-banner" onclick="this.closest('.app').showWeeklyGrowth()">
+        <h4>🌟 چالنج رشد هفتگی</h4>
+        <p>امروز فقط ۵ دقیقه وقت گذاشتید. چالنج رشد هفته رو ببینید!</p>
+      </div>
+
+      <div class="leitner-card">
+        <h3 style="margin:0 0 12px;font-size:16px">یادگیری گرامر با آهنگ</h3>
+        <div id="grammar-songs-ui"></div>
+      </div>
+
+      <button onclick="window.location.reload()" class="btn btn-primary" style="width:100%;margin-top:16px">
+        شروع تمرین جدید
+      </button>
+    `;
+
+    document.querySelector('.app').innerHTML = html;
+  }
+
+  showWeeklyGrowthModal() {
+    const modal = new WeeklyGrowthModal({ storage: this.storage });
+    modal.open();
+  }
+
+  bindEvents() {
+    // دکمه‌های جدید را اینجا bind کن
+  }
+}
+
+// شروع اپلیکیشن
+window.lingovault = new LingoVaultPopup();
