@@ -1,0 +1,154 @@
+/* popup.css — سبک کامل LingoVault 1.2.2 */
+
+.app {
+  font-family: 'Inter', system-ui, sans-serif;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  background: var(--surface, #fff);
+  color: var(--text, #0F2438);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.theme-dark .app {
+  background: var(--surface-elevated, #182234);
+  color: var(--text, #E8EEF6);
+}
+
+/* Leitner Main Screen */
+.leitner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border, #D8E8F8);
+}
+.leitner-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.leitner-streak {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--success, #19C37D);
+}
+
+/* Cards */
+.leitner-card {
+  background: var(--bg, #F6FAFF);
+  border: 1px solid var(--border, #D8E8F8);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+}
+.leitner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(11, 107, 203, 0.1);
+}
+.theme-dark .leitner-card {
+  background: var(--surface, #121A2B);
+  border-color: var(--border, #2A3A4F);
+}
+
+/* Words List */
+.words-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.word-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.theme-dark .word-item {
+  background: var(--surface, #121A2B);
+}
+.word-en {
+  font-size: 17px;
+  font-weight: 600;
+  direction: ltr;
+}
+.word-fa {
+  font-size: 15px;
+  color: var(--text-secondary, #5A7189);
+  direction: rtl;
+}
+
+/* Buttons */
+.btn {
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-primary {
+  background: var(--primary, #0B6BCB);
+  color: white;
+  border: none;
+}
+.btn-primary:hover {
+  background: #0a5bbf;
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary, #0B6BCB);
+  color: var(--primary, #0B6BCB);
+}
+.btn-outline:hover {
+  background: rgba(11, 107, 203, 0.08);
+}
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+/* Weekly Growth Banner */
+.wg-banner {
+  background: linear-gradient(90deg, #0B6BCB, #1E88E5);
+  color: white;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+.wg-banner h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.wg-banner p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* Grammar Songs */
+.gs-block {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border, #D8E8F8);
+}
+.gs-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Dark theme support */
+body.theme-dark .btn-primary { background: #0a5bbf; }
+body.theme-dark .btn-outline { border-color: #53b2ff; color: #53b2ff; }
