@@ -1,0 +1,138 @@
+/* Weekly Growth modal */
+.wg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  background: rgba(15, 36, 56, 0.45);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+.wg-overlay.is-open { opacity: 1; }
+.wg-panel {
+  width: 100%;
+  max-width: 420px;
+  max-height: 88vh;
+  overflow: auto;
+  background: var(--surface, #fff);
+  color: var(--text, #0F2438);
+  border-radius: 16px 16px 0 0;
+  padding: 18px 16px 24px;
+  box-shadow: 0 -8px 40px rgba(15, 36, 56, 0.18);
+}
+.wg-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.wg-kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary, #0B6BCB);
+  margin-bottom: 4px;
+}
+.wg-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text, #0F2438);
+  letter-spacing: -0.02em;
+}
+.wg-meta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-secondary, #5A7189);
+}
+.wg-close {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-secondary, #5A7189);
+  min-width: 36px;
+  min-height: 36px;
+}
+.wg-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--primary, #0B6BCB);
+  margin-bottom: 6px;
+}
+.wg-action {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text, #0F2438);
+}
+.wg-phrase-card {
+  border: 1px solid var(--border, #D8E8F8);
+  border-radius: 12px;
+  padding: 12px;
+  background: var(--bg, #F6FAFF);
+  margin-bottom: 16px;
+}
+.wg-phrase {
+  font-family: Inter, var(--font-en), system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text, #0F2438);
+  margin-bottom: 6px;
+}
+.wg-phrase-fa {
+  font-size: 13px;
+  color: var(--text-secondary, #5A7189);
+  direction: rtl;
+  text-align: right;
+}
+.wg-done-btn { width: 100%; min-height: 44px; }
+.wg-done-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--success, #19C37D);
+  font-weight: 600;
+}
+.wg-empty { color: var(--text-secondary); text-align: center; padding: 24px; }
+
+body.theme-dark .wg-panel {
+  background: var(--surface-elevated, #182234);
+  color: var(--text, #E8EEF6);
+}
+body.theme-dark .wg-phrase-card {
+  background: var(--surface, #121A2B);
+  border-color: var(--border, #2A3A4F);
+}
+body.theme-dark .wg-phrase,
+body.theme-dark .wg-title,
+body.theme-dark .wg-action {
+  color: var(--text, #E8EEF6);
+}
+
+.wg-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--primary, #0B6BCB);
+  background: transparent;
+  color: var(--primary, #0B6BCB);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.wg-home-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.wg-home-btn.has-new {
+  box-shadow: 0 0 0 3px rgba(11, 107, 203, 0.15);
+    }
