@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-03",
+  "sourceNote": "Curated educational mapping. Lesson pages: ESLSongs.com. Audio: YouTube (external). No scraping at runtime.",
+  "entries": [
+    {
+      "grammarKey": "present_simple",
+      "matchTitles": [
+        "Present Simple",
+        "حال ساده",
+        "Simple Present",
+        "present simple"
+      ],
+      "songs": [
+        {
+          "id": "ps_bruno_mars_jtwya",
+          "title": "Just the Way You Are",
+          "artist": "Bruno Mars",
+          "level": "A2",
+          "grammarFocus": "Present Simple — especially 3rd person singular (-s/-es)",
+          "grammarFocusFa": "حال ساده — به‌خصوص سوم‌شخص مفرد",
+          "whyHelps": "This song repeats many Present Simple forms. Hearing the -s ending in a natural melody makes the pattern stick.",
+          "whyHelpsFa": "این آهنگ بارها ساختار حال ساده را تکرار می‌کند. شنیدن پایانه‌ی s در ملودی به ماندگاری الگو کمک می‌کند.",
+          "patterns": [
+            "She looks",
+            "She smiles",
+            "She hates",
+            "I want you"
+          ],
+          "examples": [
+            "She's so beautiful, and I tell her every day.",
+            "When I see your face, there's not a thing that I would change."
+          ],
+          "eslSongsUrl": "https://www.eslsongs.com/practice/beginners-lyrics/basic-level/bruno-mars-just-the-way-you-are/",
+          "youtubeUrl": "https://www.youtube.com/watch?v=LjhCEhWiKXk",
+          "pdfUrl": "https://www.eslsongs.com/wp-content/uploads/2022/10/bruno-mars-just-the-way-you-are.pdf",
+          "quiz": [
+            {
+              "type": "gap",
+              "promptEn": "When she ____ me if she looks OK, I always say yes. (ask)",
+              "promptFa": "When she ____ me if she looks OK… (ask)",
+              "options": [
+                "ask",
+                "asks",
+                "asking",
+                "asked"
+              ],
+              "answer": "asks",
+              "hintEn": "she + verb-s in Present Simple",
+              "hintFa": "she در حال ساده با s می‌آید"
+            },
+            {
+              "type": "gap",
+              "promptEn": "She ____ believe the compliments. (not / do)",
+              "promptFa": "She ____ believe the compliments. (منفی)",
+              "options": [
+                "don't",
+                "doesn't",
+                "isn't",
+                "didn't"
+              ],
+              "answer": "doesn't",
+              "hintEn": "he/she/it negative → does not / doesn't + base verb",
+              "hintFa": "منفی سوم‌شخص: doesn't + فعل ساده"
+            },
+            {
+              "type": "choose",
+              "promptEn": "Find the ONLY correct sentence:",
+              "promptFa": "فقط جملهٔ درست را پیدا کن:",
+              "options": [
+                "She look amazing just the way she are",
+                "She looks amazing just the way she is",
+                "She looking amazing just the way she is",
+                "She looks amazing just the way she are"
+              ],
+              "answer": "She looks amazing just the way she is",
+              "hintEn": "looks (3rd person) + she is (not are)",
+              "hintFa": "looks برای she و is برای she"
+            },
+            {
+              "type": "choose",
+              "promptEn": "Which question is correct Present Simple?",
+              "promptFa": "کدام سوال حال ساده درست است؟",
+              "options": [
+                "Does she looks OK?",
+                "Do she look OK?",
+                "Does she look OK?",
+                "Is she look OK?"
+              ],
+              "answer": "Does she look OK?",
+              "hintEn": "Does + she + base verb (look, not looks)",
+              "hintFa": "Does + she + فعل ساده (look نه looks)"
+            },
+            {
+              "type": "gap",
+              "promptEn": "The whole world ____ and stares for a while. (stop)",
+              "promptFa": "The whole world ____ and stares… (stop)",
+              "options": [
+                "stop",
+                "stops",
+                "stopping",
+                "stopped"
+              ],
+              "answer": "stops",
+              "hintEn": "world = singular → stops",
+              "hintFa": "world مفرد است → stops"
+            },
+            {
+              "type": "choose",
+              "promptEn": "Rewrite correctly: \"Her laugh she hate but I think it sexy.\"",
+              "promptFa": "درست‌نویسی: \"Her laugh she hate but I think it sexy.\"",
+              "options": [
+                "She hate her laugh but I thinks it is sexy.",
+                "She hates her laugh but I think it is sexy.",
+                "She hates her laugh but I thinks it is sexy.",
+                "She hate her laugh but I think it sexy."
+              ],
+              "answer": "She hates her laugh but I think it is sexy.",
+              "hintEn": "she hates / I think (no -s on think)",
+              "hintFa": "she hates — اما I think بدون s"
+            }
+          ]
+        },
+        {
+          "id": "ps_clapton_wonderful",
+          "title": "Wonderful Tonight",
+          "artist": "Eric Clapton",
+          "level": "A2",
+          "grammarFocus": "Present Simple — affirmative, negative, questions",
+          "grammarFocusFa": "حال ساده — مثبت، منفی و سوالی",
+          "whyHelps": "The lyrics mix statements and questions in Present Simple (she puts on, Do I look…?). Good for noticing question form with do.",
+          "whyHelpsFa": "متن هم جمله خبری و هم سوال حال ساده دارد؛ برای دیدن فرم سوالی با do مناسب است.",
+          "patterns": [
+            "She puts on",
+            "She asks",
+            "Do I look all right?",
+            "We go"
+          ],
+          "examples": [
+            "She puts on her make-up and brushes her long blonde hair.",
+            "And then she asks me, \"Do I look all right?\""
+          ],
+          "eslSongsUrl": "https://www.eslsongs.com/practice/tenses/present-tense/wonderful-tonight-eric-clapton/",
+          "youtubeUrl": "https://www.youtube.com/watch?v=UprwkbzUX6g",
+          "pdfUrl": "https://www.eslsongs.com/wp-content/uploads/2022/10/eric-clapton-wonderful-tonight.pdf",
+          "quiz": [
+            {
+              "type": "gap",
+              "promptEn": "It's late; she ____ what clothes to wear. (wonder)",
+              "promptFa": "It's late; she ____ what clothes to wear. (wonder)",
+              "options": [
+                "wonder",
+                "wonders",
+                "wondering",
+                "wondered"
+              ],
+              "answer": "wonders",
+              "hintEn": "Present Simple narrative: she wonders",
+              "hintFa": "در روایت حال ساده: she wonders"
+            },
+            {
+              "type": "gap",
+              "promptEn": "She puts on her make-up and ____ her hair. (brush)",
+              "promptFa": "She puts on… and ____ her hair. (brush)",
+              "options": [
+                "brush",
+                "brushes",
+                "brushing",
+                "brushed"
+              ],
+              "answer": "brushes",
+              "hintEn": "Same subject she → brushes",
+              "hintFa": "همان فاعل she → brushes"
+            },
+            {
+              "type": "choose",
+              "promptEn": "Correct the question: \"Does I look all right?\"",
+              "promptFa": "سوال را درست کن: \"Does I look all right?\"",
+              "options": [
+                "Does I look all right?",
+                "Do I look all right?",
+                "Does I looks all right?",
+                "Do I looks all right?"
+              ],
+              "answer": "Do I look all right?",
+              "hintEn": "I → Do (not Does) + base verb",
+              "hintFa": "با I از Do استفاده می‌شود نه Does"
+            },
+            {
+              "type": "gap",
+              "promptEn": "Everyone ____ to see this beautiful lady. (turn)",
+              "promptFa": "Everyone ____ to see… (turn)",
+              "options": [
+                "turn",
+                "turns",
+                "turning",
+                "turned"
+              ],
+              "answer": "turns",
+              "hintEn": "everyone = singular → turns",
+              "hintFa": "everyone مفرد حساب می‌شود → turns"
+            },
+            {
+              "type": "choose",
+              "promptEn": "Which negative is correct?",
+              "promptFa": "کدام منفی درست است؟",
+              "options": [
+                "You just don't realizes how much I love you.",
+                "You just doesn't realize how much I love you.",
+                "You just don't realize how much I love you.",
+                "You just not realize how much I love you."
+              ],
+              "answer": "You just don't realize how much I love you.",
+              "hintEn": "you → don't + base verb realize",
+              "hintFa": "you → don't + فعل ساده"
+            },
+            {
+              "type": "choose",
+              "promptEn": "Pick the sentence with a Present Simple ERROR:",
+              "promptFa": "جمله‌ای که خطا دارد را پیدا کن:",
+              "options": [
+                "We go to a party and everyone turns to see.",
+                "She asks me and I say yes.",
+                "She put on her make-up every evening.",
+                "I feel wonderful tonight."
+              ],
+              "answer": "She put on her make-up every evening.",
+              "hintEn": "Habit in present → puts (not put)",
+              "hintFa": "عادت در حال → puts نه put"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+            }
