@@ -1,0 +1,228 @@
+/* Grammar Through Songs — isolated styles */
+.gs-block {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border, #D8E8F8);
+}
+.gs-header {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.gs-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--primary-soft, #E8F2FC);
+  color: var(--primary, #0B6BCB);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.gs-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text, #0F2438);
+}
+.gs-sub {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: var(--text-secondary, #5A7189);
+  line-height: 1.4;
+}
+.gs-song-card {
+  background: var(--surface, #fff);
+  border: 1px solid var(--border, #D8E8F8);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm, 0 1px 2px rgba(15,36,56,0.04));
+}
+.gs-song-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text, #0F2438);
+}
+.gs-song-artist {
+  font-size: 11px;
+  color: var(--text-secondary, #5A7189);
+  margin-top: 2px;
+}
+.gs-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--primary, #0B6BCB);
+  margin-bottom: 4px;
+}
+.gs-focus, .gs-why {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--text, #0F2438);
+  line-height: 1.5;
+}
+.gs-why p { margin: 0; color: var(--text-secondary, #5A7189); }
+.gs-patterns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.gs-pattern {
+  font-size: 11px;
+  font-family: Inter, var(--font-en), system-ui, sans-serif;
+  direction: ltr;
+  background: var(--primary-soft, #E8F2FC);
+  color: var(--primary, #0B6BCB);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-weight: 600;
+}
+.gs-examples {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  font-size: 12px;
+  direction: ltr;
+  text-align: left;
+  color: var(--text-secondary, #5A7189);
+  font-family: Inter, var(--font-en), system-ui, sans-serif;
+}
+.gs-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.gs-actions .btn {
+  min-height: 36px;
+  flex: 1 1 auto;
+}
+.gs-disclaimer {
+  margin: 4px 0 0;
+  font-size: 10px;
+  color: var(--text-tertiary, #8B9FB3);
+  line-height: 1.45;
+}
+
+.gs-quiz {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border, #D8E8F8);
+  background: var(--bg, #F6FAFF);
+}
+.gs-quiz-progress {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary, #0B6BCB);
+  margin-bottom: 8px;
+}
+.gs-quiz-prompt {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text, #0F2438);
+  margin-bottom: 10px;
+  line-height: 1.5;
+  direction: ltr;
+  text-align: left;
+  font-family: Inter, var(--font-en), system-ui, sans-serif;
+}
+.gs-quiz-opts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.gs-quiz-opt {
+  min-height: 40px;
+  text-align: left;
+  direction: ltr;
+  font-family: Inter, var(--font-en), system-ui, sans-serif;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border, #D8E8F8);
+  background: #fff;
+  cursor: pointer;
+  color: var(--text, #0F2438);
+}
+.gs-quiz-opt:hover:not(:disabled) {
+  border-color: var(--primary, #0B6BCB);
+}
+.gs-quiz-opt.is-correct {
+  border-color: var(--success, #19C37D);
+  background: #E8F8F0;
+}
+.gs-quiz-opt.is-wrong {
+  border-color: var(--danger, #FF5A5F);
+  background: #FEECEC;
+}
+.gs-quiz-feedback {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.gs-quiz-feedback.ok { color: var(--success, #19C37D); }
+.gs-quiz-feedback.bad { color: var(--danger, #FF5A5F); }
+.gs-quiz-hint {
+  font-weight: 500;
+  color: var(--text-secondary, #5A7189);
+  font-size: 11px;
+}
+.gs-quiz-result {
+  text-align: center;
+}
+.gs-quiz-score {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary, #0B6BCB);
+  margin-bottom: 8px;
+}
+.gs-quiz-result .btn { margin: 4px; }
+
+
+/* Dark theme — quiz options must remain readable */
+body.theme-dark .gs-quiz {
+  background: var(--surface-elevated, #182234);
+  border-color: var(--border, #2A3A4F);
+}
+body.theme-dark .gs-quiz-prompt {
+  color: var(--text, #E8EEF6);
+}
+body.theme-dark .gs-quiz-opt {
+  background: var(--surface, #121A2B);
+  color: var(--text, #E8EEF6);
+  border-color: var(--border, #2A3A4F);
+}
+body.theme-dark .gs-quiz-opt:hover:not(:disabled) {
+  border-color: var(--primary, #53B2FF);
+  background: var(--surface-elevated, #182234);
+}
+body.theme-dark .gs-quiz-opt.is-correct {
+  background: rgba(25, 195, 125, 0.18);
+  color: #B6F0D2;
+  border-color: var(--success, #19C37D);
+}
+body.theme-dark .gs-quiz-opt.is-wrong {
+  background: rgba(255, 90, 95, 0.16);
+  color: #FFC4C6;
+  border-color: var(--danger, #FF5A5F);
+}
+body.theme-dark .gs-quiz-feedback.ok { color: #7EE0B0; }
+body.theme-dark .gs-quiz-feedback.bad { color: #FF9A9D; }
+body.theme-dark .gs-quiz-hint { color: var(--text-secondary, #9AAFBF); }
+body.theme-dark .gs-quiz-score { color: var(--primary, #53B2FF); }
+body.theme-dark .gs-song-card {
+  background: var(--surface-elevated, #182234);
+  border-color: var(--border, #2A3A4F);
+}
+body.theme-dark .gs-song-title,
+body.theme-dark .gs-focus,
+body.theme-dark .gs-why {
+  color: var(--text, #E8EEF6);
+  }
